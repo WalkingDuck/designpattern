@@ -1,5 +1,6 @@
 package com.wtw.factory;
 
+import com.wtw.factory.abstractt.beans.*;
 import com.wtw.factory.beans.Phone;
 import com.wtw.factory.method.AppleFactory;
 import com.wtw.factory.method.HwFactory;
@@ -38,5 +39,19 @@ public class FactoryDemo {
          hw.call();
          apple.call();
          //相比简单工厂模式，需要更多的代码
+    }
+
+    @Test
+    public void testAbstract() {
+        IProductFactory hwFactory = new HWFactory();
+        IProductFactory miFactory = new MIFactory();
+        IPhoneProduct hwPhone = hwFactory.getPhone();
+        IRouterProduct hwRouter = hwFactory.getRouter();
+        IRouterProduct miRouter = miFactory.getRouter();
+        IPhoneProduct miPhone = miFactory.getPhone();
+        hwPhone.open();
+        miPhone.open();
+        hwRouter.open();
+        miRouter.open();
     }
 }
