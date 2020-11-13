@@ -1,4 +1,4 @@
-package com.wtw.factory;
+package com.wtw.factory.simple;
 
 import com.wtw.factory.beans.Apple;
 import com.wtw.factory.beans.HuaWei;
@@ -7,7 +7,7 @@ import com.wtw.factory.beans.XiaoMi;
 
 /**
  * 简单(静态)工厂模式实现
- * 缺点：要增加产品必须修改代码
+ * 缺点：要增加产品必须修改代码 不遵循开闭原则
  * 不适合产品经常变化的场景
  */
 public class SimpleFactory {
